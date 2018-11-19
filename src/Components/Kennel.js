@@ -1,32 +1,21 @@
 import React, { Component } from "react"
-import EmployeeList from "./EmployeeList/EmployeeList"
-import LocationList from "./Locations/LocationList"
-import "../Kennel.css"
+import NavBar from "./nav/NavBar"
+import ApplicationViews from "./ApplicationViews"
+
+import "./Kennel.css"
+import "bootstrap/dist/css/bootstrap.min.css"
+
 
 class Kennel extends Component {
-    employeesFromAPI = [
-        { id: 1, name: "Jessica Younker"},
-        { id: 2, name: "Jordan Nelson"},
-        { id: 3, name: "Zoe LeBlanc"},
-        { id: 4, name: "Blaise Roberts"}
-    ]
-
-    locationsFromAPI = [
-        { id: 1, name: "Nashville North", address: "500 Circle Way"},
-        { id: 2, name: "Nashville South", address: "10101 Binary Court"}
-    ]
-
-    state = {
-        employees: this.employeesFromAPI,
-        locations: this.locationsFromAPI
-    }
-
-    render(){
+    render() {
         return (
-            <article className="kennel">
-                <LocationList locations={this.state.locations}/>
-                <EmployeeList employees={this.state.employees}/>
-            </article>
+            <React.Fragment>
+                <NavBar />
+                <br></br>
+                <br></br>
+                <br></br>
+                <ApplicationViews />
+            </React.Fragment>
         )
     }
 }

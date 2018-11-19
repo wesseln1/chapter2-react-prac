@@ -10,7 +10,6 @@ class LocationList extends Component {
                 <div key={location.id}>
                     <p>{location.name}</p>
                     <p>{location.address}</p>
-                    <br></br>
                 </div>
                 )
             }
